@@ -47,7 +47,7 @@ async function searchMemes() {
     "?keywords=" + encodeURIComponent(query) +
     "&media-type=image" +
     "&number=9";
-
+/** 
 // Ersetze 'dein-projektname' durch deine echte Netlify-Subdomain
 const netlifyUrl = 'https://gleeful-seahorse-3ef41f.netlify.app/.netlify/functions/get-memes';
 
@@ -55,11 +55,11 @@ const res = await fetch(`${netlifyUrl}?keywords=${query}`);
 const data = await res.json()
 console.log(data);
   
-/**  // Der Aufruf geht jetzt an deine eigene Netlify-Adresse
+ // Der Aufruf geht jetzt an deine eigene Netlify-Adresse
 const res = await fetch("/.netlify/functions/get-memes?keywords="+encodeURIComponent(query));
 const data = await res.json();
 console.log(data);
-
+**/
   const res = await fetch(url, {
     headers: {
       "x-api-key": window.APILEAGUE_KEY,
@@ -67,7 +67,7 @@ console.log(data);
     }
   });
 
-  const data = await res.json(); **/
+  const data = await res.json(); 
 
   if (!data.memes) {
     out.innerHTML = `<p class="error">Keine Daten erhalten. Prüfe API-Key und Konsole.</p>`;
