@@ -5,6 +5,7 @@ apileague_key: "4f459954e5b740a7bd5aca99b1c18612"
 
 
 # Where things are
+baseurl             : "/khev-26-6r-web24"
 source              : .
 destination         : ./_site
 collections_dir     : .
