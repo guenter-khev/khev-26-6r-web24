@@ -48,14 +48,19 @@ async function searchMemes() {
     "&media-type=image" +
     "&number=9";
 
-  const res = await fetch(url, {
+  // Der Aufruf geht jetzt an deine eigene Netlify-Adresse
+const res = await fetch(`/.netlify/functions/get-memes?keywords=${suchbegriff}`);
+const data = await res.json();
+console.log(data);
+
+ /** const res = await fetch(url, {
     headers: {
       "x-api-key": window.APILEAGUE_KEY,
       "accept": "application/json"
     }
   });
 
-  const data = await res.json();
+  const data = await res.json(); **/
 
   if (!data.memes) {
     out.innerHTML = `<p class="error">Keine Daten erhalten. Prüfe API-Key und Konsole.</p>`;
