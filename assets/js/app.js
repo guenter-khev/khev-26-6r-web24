@@ -49,7 +49,7 @@ async function searchMemes() {
     "&number=9";
 
   // Der Aufruf geht jetzt an deine eigene Netlify-Adresse
-const res = await fetch(`/.netlify/functions/get-memes?keywords=${suchbegriff}`);
+const res = await fetch("/.netlify/functions/get-memes?keywords="+encodeURIComponent(query));
 const data = await res.json();
 console.log(data);
 
