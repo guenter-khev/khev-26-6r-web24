@@ -1,3 +1,6 @@
+title: "Prof. Öller Web-Site 4.2"        
+description: "Medien-Suche mit APIs"
+
 # Where things are
 source              : .
 destination         : ./_site
