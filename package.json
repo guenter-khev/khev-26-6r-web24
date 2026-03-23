@@ -1,0 +1,7 @@
+{
+  "name": "khev-26-6r-web24",
+  "version": "1.0.0",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
